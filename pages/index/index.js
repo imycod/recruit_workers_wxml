@@ -14,7 +14,9 @@ Page({
         array: [{msg: '1'}, {msg: '2'}],
         object: {
             key: 'Hello World'
-        }
+        },
+        disabled:false,
+        loading:false,
     },
     onLoad: function (options) {
         // 页面初始化 options为页面跳转所带来的参数
@@ -29,14 +31,26 @@ Page({
             header: {
                 'content-type': 'application/json'
             },
-            method:'GET',
+            method: 'GET',
             success: function (res) {
-                console.log('res.data---->',res)
+                console.log('res.data---->', res)
             }
         })
     },
 
-    onTap: function () {
-        console.log('methodA')
+    // 跳转页面
+    onTap: function (event) {
+        const type = event.currentTarget.dataset.type; // 获取传递过来的参数
+        // 根据type跳转页面
+        if (type === 'recruit') {
+            wx.navigateTo({
+                url: '/pages/recruit-workers/index'
+            })
+        }
+        if (type === 'apply') {
+            wx.navigateTo({
+                url: '/pages/apply-job/index'
+            })
+        }
     }
 })

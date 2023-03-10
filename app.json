@@ -1,6 +1,8 @@
 {
     "pages": [
-        "pages/index/index"
+        "pages/index/index",
+        "pages/apply-job/index",
+        "pages/recruit-workers/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

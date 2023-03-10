@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 微信小程序 按钮 -->
-  <button class="btn btn-t" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
+  <button class="btn btn-t" type="primary" loading="{{loading}}" disabled="{{disabled}}" data-type="recruit" bindtap="onTap">
     我要招工
   </button>
-  <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
+  <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" data-type="apply" bindtap="onTap">
     我要找活
   </button>
 </view>
