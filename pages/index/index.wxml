@@ -2,9 +2,9 @@
 <view class="container">
   <!-- 微信小程序 按钮 -->
   <button class="btn btn-t" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
-    我是公司
+    我要招工
   </button>
   <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
-    我是员工
+    我要找活
   </button>
 </view>

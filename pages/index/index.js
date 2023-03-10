@@ -8,19 +8,35 @@
  */
 // index.js
 Page({
-  data: {
-    // text:"这是一个页面"
-    text: "这是一个页面",
-    array: [{ msg: '1' }, { msg: '2' }],
-    object: {
-      key: 'Hello World'
-    }
-  },
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-  },
+    data: {
+        // text:"这是一个页面"
+        text: "这是一个页面",
+        array: [{msg: '1'}, {msg: '2'}],
+        object: {
+            key: 'Hello World'
+        }
+    },
+    onLoad: function (options) {
+        // 页面初始化 options为页面跳转所带来的参数
+        this.requestTest()
+    },
 
-  onTap: function () {
-    console.log('methodA')
-  }
+
+    // 请求测试 wx.request发送get的请求
+    requestTest: function () {
+        wx.request({
+            url: 'http://localhost:3000/users',
+            header: {
+                'content-type': 'application/json'
+            },
+            method:'GET',
+            success: function (res) {
+                console.log('res.data---->',res)
+            }
+        })
+    },
+
+    onTap: function () {
+        console.log('methodA')
+    }
 })
