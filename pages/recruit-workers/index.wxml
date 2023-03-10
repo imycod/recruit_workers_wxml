@@ -1,2 +1,2 @@
 <!--pages/recruit-workers/index.wxml-->
-<text>pages/recruit-workers/index.wxml</text>
+<text>pages/recruit-workers/index.wxml 招工页面 1.招工类型[小时,全职] 2.薪资[小时/钱,月/钱|发薪日] 3.公司[干活地点|公司图片|定位] 4.招聘多少人 5.简要描述做什么 6.联系人[姓名:电话] ...</text>
